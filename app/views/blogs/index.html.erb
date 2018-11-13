@@ -1,0 +1,18 @@
+<h1>Sup <%if user_signed_in?%><%=current_user.username%>
+  <%else%>you should like totally sign in bro<%end%></h1>
+
+<div class = 'wrapper'>
+<%@blogs.all.reverse.each do |b|%>
+<div class = 'blog'>
+<div class='title'><a href="/blogs/<%=b.id%>"><%=b.title%></a></div>
+<div><%=b.content%></div>
+<div>Posted by: <%=b.user.username%></div>
+<div>Comments: <%b.comments.each do |c|%>
+      <br>
+      <%=c.user.username%>:
+      <%=c.content%>
+      <%end%>
+</div>
+</div>
+<%end%>
+</div>

@@ -1,0 +1,15 @@
+<div>
+  <h1><%= current_blog.title%></h1>
+  <h1><%=current_blog.content%></h1>
+  <%if user_signed_in?%>
+  <%=form_for ([current_blog, current_blog.comments.build])  do |f|%>
+  <div>Content: <%=f.text_area :content%></div>
+  <%= f.submit %>
+  <%end%>
+  <%if current_user.id == current_blog.user_id%>
+  <%=link_to "Edit", "/blogs/#{current_blog.id}/edit"%>
+  <%= link_to "Delete Blog", blog_path, method: :delete, data: {confirm: 'Are You Sure about that?'}%>
+  <%end%>
+  <%end%>
+</div>
+<%= link_to "back",:back%>

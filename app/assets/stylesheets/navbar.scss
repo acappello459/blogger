@@ -1,0 +1,16 @@
+nav{
+  width: 50%;
+  height: 50px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+nav li{
+  list-style: none;
+  display: inline;
+  padding: 25px;
+}
+
+nav li a {
+  color: red;
+}
