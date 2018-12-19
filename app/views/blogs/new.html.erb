@@ -1,6 +1,6 @@
-<h3>Create a new Blog:</h3>
-<%=form_for Blog.new do |f|%>
-<div>Title: <%=f.text_field :title%></div>
-<div>Content: <%=f.text_area :content%></div>
+<!-- #<h3>Create a new Blog:</h3> -->
+<div class='newBlog'><%=form_for @blog do |f|%>
+<div id='newTitle'>Title: </div> <div><%=f.text_field :title, class: "text_title"%></div>
+<div id='newContent'>Content: </div><div><%=f.text_area :content, class: "text_content"%></div>
 <%= f.submit %>
-<%end%>
+<%end%></div>

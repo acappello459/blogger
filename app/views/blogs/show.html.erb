@@ -1,6 +1,8 @@
 <div>
-  <h1><%= current_blog.title%></h1>
-  <h1><%=current_blog.content%></h1>
+  <div class='blog'>
+    <div class='title'><%= current_blog.title%></div>
+    <div class='content'><%=current_blog.content%></div>
+  </div>
   <%if user_signed_in?%>
   <%=form_for ([current_blog, current_blog.comments.build])  do |f|%>
   <div>Content: <%=f.text_area :content%></div>

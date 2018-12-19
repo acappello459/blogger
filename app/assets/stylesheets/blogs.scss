@@ -3,11 +3,45 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .wrapper{
   margin: 10px auto;
-  text-align: center;
 }
-.title{
-  font-size: 2em;
+.title a{
+  text-decoration: underline;
+  color: #3299CC;
+  margin: 10px;
+  // font-size: em;
 }
 .blog{
+  width: 70%;
+  background-color: #36648B;
+  color: lightgrey;
+  // height: 300px;
+  font-size: 2em;
+  text-align: center;
+  margin: 10px auto;
   border: 2px solid green;
+  border-radius: 10px;
+
+}
+.comments{
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0 0 10px 10px;
+  background-color: lightgrey;
+  color: #36648B;
+}
+
+.home-image{
+  // background-image: url("stock.jpg");
+  // background-repeat: no-repeat;
+  // position: relative;
+  // border: 2px solid;
+  margin: 25px auto;
+  height: 50vh;
+  width: 75%;
+}
+
+.home-image img{
+  margin: auto auto;
+  width: 100%;
+  // object-fit: cover;
 }

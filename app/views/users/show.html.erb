@@ -1,3 +1,17 @@
-<%@blogs.each do |f|%>
-<div><%=f.content%></div>
+<%if @user.username.last == "s"%>
+<div class = 'show_username'><h1><%= @user.username%>' blog posts:</h1></div>
+<%else%>
+<div class = 'show_username'><h1><%= @user.username%>'s blog posts</h1></div>
+<%end%>
+
+<%if @user.blogs.count == 0%>
+<h2 class='error'>Uh Oh! This user hasn't made any posts yet!</h2>
+<%else%>
+<%@user.blogs.reverse.each do |b|%>
+<div class = 'blog'>
+<div class='title'><a href="/blogs/<%=b.id%>"><%=b.title%></a></div>
+<div>Posted by: <%=b.user.username%></div>
+<div><%=b.content%></div>
+</div>
+<%end%>
 <%end%>
